@@ -9,7 +9,7 @@ static gameRender timeBorder;
 static gameRender gameTime;
 static gameRender landBorder;
 static gameRender gameLand;
-static gameRender floor;
+static gameRender floor_;
 static gameRender floor_p1;
 static gameRender floor_p2;
 static gameRender stone;

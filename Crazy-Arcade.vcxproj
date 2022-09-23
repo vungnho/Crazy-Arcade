@@ -68,6 +68,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -97,8 +100,32 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)include\SDL2_image-2.6.2\include;$(ProjectDir)include\SDL2_mixer-2.6.2\include;$(ProjectDir)include\SDL2_ttf-2.20.1\include;$(ProjectDir)include\SDL2-2.24.0\include;$(ProjectDir)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)include\SDL2_image-2.6.2\lib\x64;$(ProjectDir)include\SDL2_mixer-2.6.2\lib\x64;$(ProjectDir)include\SDL2_ttf-2.20.1\lib\x64;$(ProjectDir)include\SDL2-2.24.0\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2_ttf.lib;SDL2_mixer.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "$(ProjectDir)include\SDL2-2.24.0\lib\x64\SDL2.dll" "$(OutDir)"
+xcopy /y /d "$(ProjectDir)include\SDL2_ttf-2.20.1\lib\x64\SDL2_ttf.dll" "$(OutDir)"
+xcopy /y /d "$(ProjectDir)include\SDL2_mixer-2.6.2\lib\x64\SDL2_mixer.dll" "$(OutDir)"
+xcopy /y /d "$(ProjectDir)include\SDL2_image-2.6.2\lib\x64\SDL2_image.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="main.cpp">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent>false</DeploymentContent>
+    </ClCompile>
     <ClCompile Include="src\bomb.cpp" />
     <ClCompile Include="src\bot.cpp" />
     <ClCompile Include="src\character.cpp" />

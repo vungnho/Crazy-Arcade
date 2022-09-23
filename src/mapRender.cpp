@@ -12,7 +12,7 @@ const SDL_Rect smokeRect[2]={{128,0,64,64},{64,0,64,64}};
 extern bool soundOn;
 
 void initMap(SDL_Renderer* renderer){
-    floor.setRenderer(renderer);
+    floor_.setRenderer(renderer);
     floor_p1.setRenderer(renderer);
     floor_p2.setRenderer(renderer);
     stone.setRenderer(renderer);
@@ -66,7 +66,7 @@ void renderFloor(bool lock_on,SDL_Point lockBlock){
         floor_rect.y=i*blockWidth*2;
         for(int j=0;j<COLUMN/2+1;j++){
             floor_rect.x=j*blockWidth*2;
-            floor.render(0,0,&floor_rect);
+            floor_.render(0,0,&floor_rect);
         }
     }
     if(lockBlock.x!=0 && lockBlock.y!=0){
@@ -90,7 +90,7 @@ void renderFloor_landMode(){
         for(int j=0;j<COLUMN;j++){
             floor_rect.x=j*blockWidth;
             if(floorMap[i][j]==FLOOR_DEF)
-                floor.render(0,0,&floor_rect);
+                floor_.render(0,0,&floor_rect);
             else if(floorMap[i][j]==FLOOR_P1)
                 floor_p1.render(0,0,&floor_rect);
             else if(floorMap[i][j]==FLOOR_P2)
@@ -109,7 +109,7 @@ void loadMap(int MAP){
     std::ifstream mapFile;
     switch(MAP){
         case S_TOWN:    mapFile.open("asset/map_files/singleplayer/town.txt");
-                        floor.loadImage("asset/map_asset/town/floor.png");
+                        floor_.loadImage("asset/map_asset/town/floor.png");
                         stone.loadImage("asset/map_asset/town/stone.png");
                         brick.loadImage("asset/map_asset/town/brick.png");
                         giftBox.loadImage("asset/map_asset/town/gift_box.png");
@@ -117,7 +117,7 @@ void loadMap(int MAP){
                             Mix_PlayMusic(town_music,-1);
                         break;
         case S_DESERT:  mapFile.open("asset/map_files/singleplayer/desert.txt");
-                        floor.loadImage("asset/map_asset/desert/floor.png");
+                        floor_.loadImage("asset/map_asset/desert/floor.png");
                         stone.loadImage("asset/map_asset/desert/stone.png");
                         brick.loadImage("asset/map_asset/desert/brick.png");
                         giftBox.loadImage("asset/map_asset/desert/gift_box.png");
@@ -125,7 +125,7 @@ void loadMap(int MAP){
                             Mix_PlayMusic(desert_music,-1);
                         break;
         case S_XMAS:    mapFile.open("asset/map_files/singleplayer/xmas.txt");
-                        floor.loadImage("asset/map_asset/xmas/floor.png");
+                        floor_.loadImage("asset/map_asset/xmas/floor.png");
                         stone.loadImage("asset/map_asset/xmas/stone.png");
                         brick.loadImage("asset/map_asset/xmas/brick.png");
                         giftBox.loadImage("asset/map_asset/xmas/gift_box.png");
@@ -133,7 +133,7 @@ void loadMap(int MAP){
                             Mix_PlayMusic(xmas_music,-1);
                         break;
         case S_UNDERWATER:  mapFile.open("asset/map_files/singleplayer/underwater.txt");
-                            floor.loadImage("asset/map_asset/underwater/floor.png");
+                            floor_.loadImage("asset/map_asset/underwater/floor.png");
                             stone.loadImage("asset/map_asset/underwater/stone.png");
                             brick.loadImage("asset/map_asset/underwater/brick.png");
                             giftBox.loadImage("asset/map_asset/underwater/gift_box.png");
@@ -141,7 +141,7 @@ void loadMap(int MAP){
                                 Mix_PlayMusic(underwater_music,-1);
                             break;
         case M_TOWN:    mapFile.open("asset/map_files/multiplayer/town.txt");
-                        floor.loadImage("asset/map_asset/town/floor.png");
+                        floor_.loadImage("asset/map_asset/town/floor.png");
                         stone.loadImage("asset/map_asset/town/stone.png");
                         brick.loadImage("asset/map_asset/town/brick.png");
                         giftBox.loadImage("asset/map_asset/town/gift_box.png");
@@ -149,7 +149,7 @@ void loadMap(int MAP){
                             Mix_PlayMusic(town_music,-1);
                         break;
         case M_DESERT:  mapFile.open("asset/map_files/multiplayer/desert.txt");
-                        floor.loadImage("asset/map_asset/desert/floor.png");
+                        floor_.loadImage("asset/map_asset/desert/floor.png");
                         stone.loadImage("asset/map_asset/desert/stone.png");
                         brick.loadImage("asset/map_asset/desert/brick.png");
                         giftBox.loadImage("asset/map_asset/desert/gift_box.png");
@@ -157,7 +157,7 @@ void loadMap(int MAP){
                             Mix_PlayMusic(desert_music,-1);
                         break;
         case M_XMAS:    mapFile.open("asset/map_files/multiplayer/xmas.txt");
-                        floor.loadImage("asset/map_asset/xmas/floor.png");
+                        floor_.loadImage("asset/map_asset/xmas/floor.png");
                         stone.loadImage("asset/map_asset/xmas/stone.png");
                         brick.loadImage("asset/map_asset/xmas/brick.png");
                         giftBox.loadImage("asset/map_asset/xmas/gift_box.png");
@@ -165,7 +165,7 @@ void loadMap(int MAP){
                             Mix_PlayMusic(xmas_music,-1);
                         break;
         case M_UNDERWATER:  mapFile.open("asset/map_files/multiplayer/underwater.txt");
-                            floor.loadImage("asset/map_asset/underwater/floor.png");
+                            floor_.loadImage("asset/map_asset/underwater/floor.png");
                             stone.loadImage("asset/map_asset/underwater/stone.png");
                             brick.loadImage("asset/map_asset/underwater/brick.png");
                             giftBox.loadImage("asset/map_asset/underwater/gift_box.png");
@@ -173,7 +173,7 @@ void loadMap(int MAP){
                                 Mix_PlayMusic(underwater_music,-1);
                             break;
         case L_MAP1:    mapFile.open("asset/map_files/multiplayer/landmap1.txt");
-                        floor.loadImage("asset/map_asset/landmode/floor.png");
+                        floor_.loadImage("asset/map_asset/landmode/floor.png");
                         floor_p1.loadImage("asset/map_asset/landmode/floor_p1.png");
                         floor_p2.loadImage("asset/map_asset/landmode/floor_p2.png");
                         stone.loadImage("asset/map_asset/landmode/stone.png");
@@ -183,7 +183,7 @@ void loadMap(int MAP){
                             Mix_PlayMusic(town_music,-1);
                         break;
         case L_MAP2:    mapFile.open("asset/map_files/multiplayer/landmap2.txt");
-                        floor.loadImage("asset/map_asset/landmode/floor.png");
+                        floor_.loadImage("asset/map_asset/landmode/floor.png");
                         floor_p1.loadImage("asset/map_asset/landmode/floor_p1.png");
                         floor_p2.loadImage("asset/map_asset/landmode/floor_p2.png");
                         stone.loadImage("asset/map_asset/landmode/stone.png");

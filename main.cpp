@@ -9,6 +9,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <SDL_mixer.h>
+#undef main
 
 using namespace std;
 
