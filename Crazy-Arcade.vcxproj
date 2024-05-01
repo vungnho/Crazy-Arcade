@@ -148,6 +148,136 @@ xcopy /y /d "$(ProjectDir)include\SDL2_image-2.6.2\lib\x64\SDL2_image.dll" "$(Ou
   <ItemGroup>
     <ResourceCompile Include="src\resource.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="asset\bomb\ball_bomb.png" />
+    <Image Include="asset\bomb\bomb_effect\bomb_fire.png" />
+    <Image Include="asset\bomb\bomb_effect\explosion.png" />
+    <Image Include="asset\bomb\bomb_effect\explo_smoke.png" />
+    <Image Include="asset\bomb\halloween_bomb.png" />
+    <Image Include="asset\bomb\robot_bomb.png" />
+    <Image Include="asset\bomb\rose_bomb.png" />
+    <Image Include="asset\bomb\skull_bomb.png" />
+    <Image Include="asset\bomb\xmas_bomb.png" />
+    <Image Include="asset\character\boz.png" />
+    <Image Include="asset\character\evie.png" />
+    <Image Include="asset\character\ghost.png" />
+    <Image Include="asset\character\grave.png" />
+    <Image Include="asset\character\ike.png" />
+    <Image Include="asset\character\lodumani.png" />
+    <Image Include="asset\character\player1_arrow.png" />
+    <Image Include="asset\character\player2_arrow.png" />
+    <Image Include="asset\character\plunk.png" />
+    <Image Include="asset\crazyarcade.ico" />
+    <Image Include="asset\effect\shield.png" />
+    <Image Include="asset\effect\skull.png" />
+    <Image Include="asset\icon_titlebar.png" />
+    <Image Include="asset\item\bomb_incre.png" />
+    <Image Include="asset\item\bomb_power.png" />
+    <Image Include="asset\item\doorclosed.png" />
+    <Image Include="asset\item\dooropen.png" />
+    <Image Include="asset\item\lock_off.png" />
+    <Image Include="asset\item\lock_on.png" />
+    <Image Include="asset\item\shield.png" />
+    <Image Include="asset\item\skull.png" />
+    <Image Include="asset\item\speedup.png" />
+    <Image Include="asset\map_asset\desert\brick.png" />
+    <Image Include="asset\map_asset\desert\floor.png" />
+    <Image Include="asset\map_asset\desert\gift_box.png" />
+    <Image Include="asset\map_asset\desert\stone.png" />
+    <Image Include="asset\map_asset\landmode\brick.png" />
+    <Image Include="asset\map_asset\landmode\floor.png" />
+    <Image Include="asset\map_asset\landmode\floor_p1.png" />
+    <Image Include="asset\map_asset\landmode\floor_p2.png" />
+    <Image Include="asset\map_asset\landmode\gift_box.png" />
+    <Image Include="asset\map_asset\landmode\stone.png" />
+    <Image Include="asset\map_asset\town\brick.png" />
+    <Image Include="asset\map_asset\town\floor.png" />
+    <Image Include="asset\map_asset\town\gift_box.png" />
+    <Image Include="asset\map_asset\town\stone.png" />
+    <Image Include="asset\map_asset\underwater\brick.png" />
+    <Image Include="asset\map_asset\underwater\floor.png" />
+    <Image Include="asset\map_asset\underwater\gift_box.png" />
+    <Image Include="asset\map_asset\underwater\stone.png" />
+    <Image Include="asset\map_asset\xmas\brick.png" />
+    <Image Include="asset\map_asset\xmas\floor.png" />
+    <Image Include="asset\map_asset\xmas\gift_box.png" />
+    <Image Include="asset\map_asset\xmas\stone.png" />
+    <Image Include="asset\menu\arrow_left.png" />
+    <Image Include="asset\menu\arrow_right.png" />
+    <Image Include="asset\menu\bg.png" />
+    <Image Include="asset\menu\bg2.png" />
+    <Image Include="asset\menu\boz.png" />
+    <Image Include="asset\menu\button_back.png" />
+    <Image Include="asset\menu\button_empty.png" />
+    <Image Include="asset\menu\button_next.png" />
+    <Image Include="asset\menu\button_previous.png" />
+    <Image Include="asset\menu\button_tutorial.png" />
+    <Image Include="asset\menu\classic.png" />
+    <Image Include="asset\menu\close_button.png" />
+    <Image Include="asset\menu\control_tutorial.png" />
+    <Image Include="asset\menu\evie.png" />
+    <Image Include="asset\menu\exit.png" />
+    <Image Include="asset\menu\ike.png" />
+    <Image Include="asset\menu\item_tutorial.png" />
+    <Image Include="asset\menu\landmode.png" />
+    <Image Include="asset\menu\land_border.png" />
+    <Image Include="asset\menu\multi.png" />
+    <Image Include="asset\menu\pause_button.png" />
+    <Image Include="asset\menu\play_button.png" />
+    <Image Include="asset\menu\plunk.png" />
+    <Image Include="asset\menu\retry.png" />
+    <Image Include="asset\menu\single.png" />
+    <Image Include="asset\menu\sound_off.png" />
+    <Image Include="asset\menu\sound_on.png" />
+    <Image Include="asset\menu\time_border.png" />
+    <Image Include="asset\menu\title.png" />
+    <Image Include="asset\menu\window_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="asset\font\crackman.ttf" />
+    <Font Include="asset\font\gtek.ttf" />
+    <Font Include="asset\font\kroft.ttf" />
+    <Font Include="asset\font\minecraft.otf" />
+    <Font Include="asset\font\pac.ttf" />
+    <Font Include="asset\font\zorque.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="asset\map_files\multiplayer\desert.txt" />
+    <Text Include="asset\map_files\multiplayer\landmap1.txt" />
+    <Text Include="asset\map_files\multiplayer\landmap2.txt" />
+    <Text Include="asset\map_files\multiplayer\town.txt" />
+    <Text Include="asset\map_files\multiplayer\town_test2.txt" />
+    <Text Include="asset\map_files\multiplayer\underwater.txt" />
+    <Text Include="asset\map_files\multiplayer\xmas.txt" />
+    <Text Include="asset\map_files\singleplayer\desert.txt" />
+    <Text Include="asset\map_files\singleplayer\test.txt" />
+    <Text Include="asset\map_files\singleplayer\town.txt" />
+    <Text Include="asset\map_files\singleplayer\underwater.txt" />
+    <Text Include="asset\map_files\singleplayer\xmas.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="asset\sound\bot_dead.ogg" />
+    <None Include="asset\sound\char_dead.ogg" />
+    <None Include="asset\sound\door_open.ogg" />
+    <None Include="asset\sound\explosion.ogg" />
+    <None Include="asset\sound\levelcomplete.ogg" />
+    <None Include="asset\sound\levelfail.ogg" />
+    <None Include="asset\sound\run.ogg" />
+    <None Include="asset\sound\setbomb.ogg" />
+    <None Include="asset\sound\shield.ogg" />
+    <None Include="asset\sound\skull.ogg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="asset\sound\button_press.wav" />
+    <Media Include="asset\sound\confirm.wav" />
+    <Media Include="asset\sound\desert.wav" />
+    <Media Include="asset\sound\menu.wav" />
+    <Media Include="asset\sound\revive.wav" />
+    <Media Include="asset\sound\start.wav" />
+    <Media Include="asset\sound\town.wav" />
+    <Media Include="asset\sound\underwater.wav" />
+    <Media Include="asset\sound\xmas.wav" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

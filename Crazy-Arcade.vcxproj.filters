@@ -13,6 +13,60 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
+    <Filter Include="asset">
+      <UniqueIdentifier>{b1d6dd17-d111-4776-a7de-d5730095f611}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\bomb">
+      <UniqueIdentifier>{9916a186-62ed-44cc-b2c7-cabb00c5b5e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\bomb\bomb_effect">
+      <UniqueIdentifier>{26810658-22e5-48a5-8846-6d1c772911dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\character">
+      <UniqueIdentifier>{c8a873f5-fdfe-4ac4-bae9-09ca304354fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\effect">
+      <UniqueIdentifier>{406a5aff-656d-4f2c-a4c9-3abedf8654bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\font">
+      <UniqueIdentifier>{299bb420-9ec7-44f0-9e2b-ce897e9a7b0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\item">
+      <UniqueIdentifier>{fb09d895-af3a-4c14-90af-d04e8cbf088b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\map_asset">
+      <UniqueIdentifier>{a3f704e8-b6ba-4a3a-9178-a7d2f2490c8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\map_asset\desert">
+      <UniqueIdentifier>{765b6871-faac-4a1c-9779-0129d927ea26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\map_asset\landmode">
+      <UniqueIdentifier>{e8b6fa52-b84b-4856-a8f0-930e094cb9bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\map_asset\town">
+      <UniqueIdentifier>{7e35754b-2b8c-4448-a1e1-e671a4bc3381}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\map_asset\underwater">
+      <UniqueIdentifier>{4c1c2ec4-7ef5-430e-81d1-5055adc1b180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\map_asset\xmas">
+      <UniqueIdentifier>{4c8397d5-c9be-4ae0-a6e5-e61421fbb747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\map_asset\map_files">
+      <UniqueIdentifier>{6e2cad30-eb3d-47b3-90e0-6b70a02744ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\map_asset\map_files\multiplayer">
+      <UniqueIdentifier>{9c976ebd-5def-4aa9-b6a4-acb0177031ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\map_asset\map_files\singleplayer">
+      <UniqueIdentifier>{819dbfde-d1bd-496e-a358-74c39ebcd222}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\menu">
+      <UniqueIdentifier>{b69546da-dd0b-4dac-839d-73bdc6341d2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="asset\sound">
+      <UniqueIdentifier>{6dd12b55-4af7-4905-92bb-21ab96fdacf8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -73,5 +127,375 @@
     <ResourceCompile Include="src\resource.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="asset\crazyarcade.ico">
+      <Filter>asset</Filter>
+    </Image>
+    <Image Include="asset\icon_titlebar.png">
+      <Filter>asset</Filter>
+    </Image>
+    <Image Include="asset\bomb\ball_bomb.png">
+      <Filter>asset\bomb</Filter>
+    </Image>
+    <Image Include="asset\bomb\halloween_bomb.png">
+      <Filter>asset\bomb</Filter>
+    </Image>
+    <Image Include="asset\bomb\robot_bomb.png">
+      <Filter>asset\bomb</Filter>
+    </Image>
+    <Image Include="asset\bomb\rose_bomb.png">
+      <Filter>asset\bomb</Filter>
+    </Image>
+    <Image Include="asset\bomb\skull_bomb.png">
+      <Filter>asset\bomb</Filter>
+    </Image>
+    <Image Include="asset\bomb\xmas_bomb.png">
+      <Filter>asset\bomb</Filter>
+    </Image>
+    <Image Include="asset\bomb\bomb_effect\bomb_fire.png">
+      <Filter>asset\bomb\bomb_effect</Filter>
+    </Image>
+    <Image Include="asset\bomb\bomb_effect\explo_smoke.png">
+      <Filter>asset\bomb\bomb_effect</Filter>
+    </Image>
+    <Image Include="asset\bomb\bomb_effect\explosion.png">
+      <Filter>asset\bomb\bomb_effect</Filter>
+    </Image>
+    <Image Include="asset\character\boz.png">
+      <Filter>asset\character</Filter>
+    </Image>
+    <Image Include="asset\character\evie.png">
+      <Filter>asset\character</Filter>
+    </Image>
+    <Image Include="asset\character\ghost.png">
+      <Filter>asset\character</Filter>
+    </Image>
+    <Image Include="asset\character\grave.png">
+      <Filter>asset\character</Filter>
+    </Image>
+    <Image Include="asset\character\ike.png">
+      <Filter>asset\character</Filter>
+    </Image>
+    <Image Include="asset\character\lodumani.png">
+      <Filter>asset\character</Filter>
+    </Image>
+    <Image Include="asset\character\player1_arrow.png">
+      <Filter>asset\character</Filter>
+    </Image>
+    <Image Include="asset\character\player2_arrow.png">
+      <Filter>asset\character</Filter>
+    </Image>
+    <Image Include="asset\character\plunk.png">
+      <Filter>asset\character</Filter>
+    </Image>
+    <Image Include="asset\effect\shield.png">
+      <Filter>asset\effect</Filter>
+    </Image>
+    <Image Include="asset\effect\skull.png">
+      <Filter>asset\effect</Filter>
+    </Image>
+    <Image Include="asset\item\bomb_incre.png">
+      <Filter>asset\item</Filter>
+    </Image>
+    <Image Include="asset\item\bomb_power.png">
+      <Filter>asset\item</Filter>
+    </Image>
+    <Image Include="asset\item\doorclosed.png">
+      <Filter>asset\item</Filter>
+    </Image>
+    <Image Include="asset\item\dooropen.png">
+      <Filter>asset\item</Filter>
+    </Image>
+    <Image Include="asset\item\lock_off.png">
+      <Filter>asset\item</Filter>
+    </Image>
+    <Image Include="asset\item\lock_on.png">
+      <Filter>asset\item</Filter>
+    </Image>
+    <Image Include="asset\item\shield.png">
+      <Filter>asset\item</Filter>
+    </Image>
+    <Image Include="asset\item\skull.png">
+      <Filter>asset\item</Filter>
+    </Image>
+    <Image Include="asset\item\speedup.png">
+      <Filter>asset\item</Filter>
+    </Image>
+    <Image Include="asset\map_asset\desert\brick.png">
+      <Filter>asset\map_asset\desert</Filter>
+    </Image>
+    <Image Include="asset\map_asset\desert\floor.png">
+      <Filter>asset\map_asset\desert</Filter>
+    </Image>
+    <Image Include="asset\map_asset\desert\gift_box.png">
+      <Filter>asset\map_asset\desert</Filter>
+    </Image>
+    <Image Include="asset\map_asset\desert\stone.png">
+      <Filter>asset\map_asset\desert</Filter>
+    </Image>
+    <Image Include="asset\map_asset\landmode\brick.png">
+      <Filter>asset\map_asset\landmode</Filter>
+    </Image>
+    <Image Include="asset\map_asset\landmode\floor.png">
+      <Filter>asset\map_asset\landmode</Filter>
+    </Image>
+    <Image Include="asset\map_asset\landmode\floor_p1.png">
+      <Filter>asset\map_asset\landmode</Filter>
+    </Image>
+    <Image Include="asset\map_asset\landmode\floor_p2.png">
+      <Filter>asset\map_asset\landmode</Filter>
+    </Image>
+    <Image Include="asset\map_asset\landmode\gift_box.png">
+      <Filter>asset\map_asset\landmode</Filter>
+    </Image>
+    <Image Include="asset\map_asset\landmode\stone.png">
+      <Filter>asset\map_asset\landmode</Filter>
+    </Image>
+    <Image Include="asset\map_asset\town\brick.png">
+      <Filter>asset\map_asset\town</Filter>
+    </Image>
+    <Image Include="asset\map_asset\town\floor.png">
+      <Filter>asset\map_asset\town</Filter>
+    </Image>
+    <Image Include="asset\map_asset\town\gift_box.png">
+      <Filter>asset\map_asset\town</Filter>
+    </Image>
+    <Image Include="asset\map_asset\town\stone.png">
+      <Filter>asset\map_asset\town</Filter>
+    </Image>
+    <Image Include="asset\map_asset\underwater\brick.png">
+      <Filter>asset\map_asset\underwater</Filter>
+    </Image>
+    <Image Include="asset\map_asset\underwater\floor.png">
+      <Filter>asset\map_asset\underwater</Filter>
+    </Image>
+    <Image Include="asset\map_asset\underwater\gift_box.png">
+      <Filter>asset\map_asset\underwater</Filter>
+    </Image>
+    <Image Include="asset\map_asset\underwater\stone.png">
+      <Filter>asset\map_asset\underwater</Filter>
+    </Image>
+    <Image Include="asset\map_asset\xmas\brick.png">
+      <Filter>asset\map_asset\xmas</Filter>
+    </Image>
+    <Image Include="asset\map_asset\xmas\floor.png">
+      <Filter>asset\map_asset\xmas</Filter>
+    </Image>
+    <Image Include="asset\map_asset\xmas\gift_box.png">
+      <Filter>asset\map_asset\xmas</Filter>
+    </Image>
+    <Image Include="asset\map_asset\xmas\stone.png">
+      <Filter>asset\map_asset\xmas</Filter>
+    </Image>
+    <Image Include="asset\menu\arrow_left.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\arrow_right.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\bg.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\bg2.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\boz.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\button_back.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\button_empty.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\button_next.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\button_previous.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\button_tutorial.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\classic.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\close_button.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\control_tutorial.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\evie.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\exit.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\ike.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\item_tutorial.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\land_border.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\landmode.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\multi.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\pause_button.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\play_button.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\plunk.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\retry.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\single.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\sound_off.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\sound_on.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\time_border.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\title.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+    <Image Include="asset\menu\window_bg.png">
+      <Filter>asset\menu</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="asset\font\crackman.ttf">
+      <Filter>asset\font</Filter>
+    </Font>
+    <Font Include="asset\font\gtek.ttf">
+      <Filter>asset\font</Filter>
+    </Font>
+    <Font Include="asset\font\kroft.ttf">
+      <Filter>asset\font</Filter>
+    </Font>
+    <Font Include="asset\font\minecraft.otf">
+      <Filter>asset\font</Filter>
+    </Font>
+    <Font Include="asset\font\pac.ttf">
+      <Filter>asset\font</Filter>
+    </Font>
+    <Font Include="asset\font\zorque.ttf">
+      <Filter>asset\font</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="asset\map_files\multiplayer\desert.txt">
+      <Filter>asset\map_asset\map_files\multiplayer</Filter>
+    </Text>
+    <Text Include="asset\map_files\multiplayer\landmap1.txt">
+      <Filter>asset\map_asset\map_files\multiplayer</Filter>
+    </Text>
+    <Text Include="asset\map_files\multiplayer\landmap2.txt">
+      <Filter>asset\map_asset\map_files\multiplayer</Filter>
+    </Text>
+    <Text Include="asset\map_files\multiplayer\town.txt">
+      <Filter>asset\map_asset\map_files\multiplayer</Filter>
+    </Text>
+    <Text Include="asset\map_files\multiplayer\town_test2.txt">
+      <Filter>asset\map_asset\map_files\multiplayer</Filter>
+    </Text>
+    <Text Include="asset\map_files\multiplayer\underwater.txt">
+      <Filter>asset\map_asset\map_files\multiplayer</Filter>
+    </Text>
+    <Text Include="asset\map_files\multiplayer\xmas.txt">
+      <Filter>asset\map_asset\map_files\multiplayer</Filter>
+    </Text>
+    <Text Include="asset\map_files\singleplayer\desert.txt">
+      <Filter>asset\map_asset\map_files\singleplayer</Filter>
+    </Text>
+    <Text Include="asset\map_files\singleplayer\test.txt">
+      <Filter>asset\map_asset\map_files\singleplayer</Filter>
+    </Text>
+    <Text Include="asset\map_files\singleplayer\town.txt">
+      <Filter>asset\map_asset\map_files\singleplayer</Filter>
+    </Text>
+    <Text Include="asset\map_files\singleplayer\underwater.txt">
+      <Filter>asset\map_asset\map_files\singleplayer</Filter>
+    </Text>
+    <Text Include="asset\map_files\singleplayer\xmas.txt">
+      <Filter>asset\map_asset\map_files\singleplayer</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="asset\sound\bot_dead.ogg">
+      <Filter>asset\sound</Filter>
+    </None>
+    <None Include="asset\sound\char_dead.ogg">
+      <Filter>asset\sound</Filter>
+    </None>
+    <None Include="asset\sound\door_open.ogg">
+      <Filter>asset\sound</Filter>
+    </None>
+    <None Include="asset\sound\explosion.ogg">
+      <Filter>asset\sound</Filter>
+    </None>
+    <None Include="asset\sound\levelcomplete.ogg">
+      <Filter>asset\sound</Filter>
+    </None>
+    <None Include="asset\sound\levelfail.ogg">
+      <Filter>asset\sound</Filter>
+    </None>
+    <None Include="asset\sound\run.ogg">
+      <Filter>asset\sound</Filter>
+    </None>
+    <None Include="asset\sound\setbomb.ogg">
+      <Filter>asset\sound</Filter>
+    </None>
+    <None Include="asset\sound\shield.ogg">
+      <Filter>asset\sound</Filter>
+    </None>
+    <None Include="asset\sound\skull.ogg">
+      <Filter>asset\sound</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="asset\sound\button_press.wav">
+      <Filter>asset\sound</Filter>
+    </Media>
+    <Media Include="asset\sound\confirm.wav">
+      <Filter>asset\sound</Filter>
+    </Media>
+    <Media Include="asset\sound\desert.wav">
+      <Filter>asset\sound</Filter>
+    </Media>
+    <Media Include="asset\sound\menu.wav">
+      <Filter>asset\sound</Filter>
+    </Media>
+    <Media Include="asset\sound\revive.wav">
+      <Filter>asset\sound</Filter>
+    </Media>
+    <Media Include="asset\sound\start.wav">
+      <Filter>asset\sound</Filter>
+    </Media>
+    <Media Include="asset\sound\town.wav">
+      <Filter>asset\sound</Filter>
+    </Media>
+    <Media Include="asset\sound\underwater.wav">
+      <Filter>asset\sound</Filter>
+    </Media>
+    <Media Include="asset\sound\xmas.wav">
+      <Filter>asset\sound</Filter>
+    </Media>
   </ItemGroup>
 </Project>
