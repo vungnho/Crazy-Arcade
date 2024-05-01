@@ -56,7 +56,7 @@ int main(int argc,char** argv){
         if(soundOn && !Mix_PlayingMusic())
             Mix_PlayMusic(menu_music,-1);
         mode=0;
-        switch(mainMenu(renderer)){
+        switch (mainMenu(renderer)) {
             case SINGLEPLAYER:  CHARACTER=chooseSingleCharacter(renderer);
                                 if(Exit || CHARACTER==0)
                                     break;
@@ -142,7 +142,11 @@ int mainMenu(SDL_Renderer* renderer){
 
     SDL_Event event;
     int choice=0,width=0,index=1;
+    int preTime = SDL_GetTicks();
+    gameRender *hovered = 0;
+    SDL_Rect *hoveredRect = 0;
     while(!choice){
+        int curTime = SDL_GetTicks();
         background.render(0,0);
         title.render(0,0);
         bSingle.render(0,0,&bSingleRect);
@@ -161,70 +165,74 @@ int mainMenu(SDL_Renderer* renderer){
             bSound_off.render(0,0,&soundRect);
             bSound_off.setBlendTexture(200);
         }
-        while(SDL_PollEvent(&event)){
-            if(event.type==SDL_QUIT){
-                choice=EXIT;
-                Exit=true;
+        while (SDL_PollEvent(&event)) {
+            hovered = 0;
+            if (event.type == SDL_QUIT) {
+                choice = EXIT;
+                Exit = true;
+            } else if (sound.checkArea(event.button.x, event.button.y)) {
+                if (soundOn) {
+                    hovered = &bSound_on;
+                } else {
+                    hovered = &bSound_off;
+                }
+                if (gameRender::waitMouseDown(event)) {
+                    if (!soundOn)
+                        Mix_PlayChannel(1, button_press, 0);
+                    if (soundOn) {
+                        soundOn = false;
+                        Mix_HaltMusic();
+                    } else {
+                        soundOn = true;
+                        Mix_PlayMusic(menu_music, -1);
+                    }
+                }
+            } else if (singlePlayer.checkArea(event.button.x, event.button.y)) {
+                hovered = &bSingle;
+                hoveredRect = &bSingleRect;
+                if (gameRender::waitMouseDown(event)) {
+                    if (soundOn)
+                        Mix_PlayChannel(1, button_press, 0);
+                    choice = SINGLEPLAYER;
+                }
+            } else if (multiPlayer.checkArea(event.button.x, event.button.y)) {
+                hovered = &bMulti;
+                hoveredRect = &bMultiRect;
+                if (gameRender::waitMouseDown(event)) {
+                    if (soundOn)
+                        Mix_PlayChannel(1, button_press, 0);
+                    choice = MULTIPLAYER;
+                }
+            } else if (exit.checkArea(event.button.x, event.button.y)) {
+                hovered = &bExit;
+                hoveredRect = &bExitRect;
+                if (gameRender::waitMouseDown(event)) {
+                    choice = EXIT;
+                    Exit = true;
+                }
+            } else if (tutorial.checkArea(event.button.x, event.button.y)) {
+                hovered = &bTutorial;
+                if (gameRender::waitMouseDown(event)) {
+                    if (soundOn)
+                        Mix_PlayChannel(1, button_press, 0);
+                    choice = TUTORIAL;
+                }
             }
-            else if(sound.checkArea(event.button.x,event.button.y) && gameRender::waitMouseDown(event)){
-                if(!soundOn)
-                    Mix_PlayChannel(1,button_press,0);
-                if(soundOn){
-                    soundOn=false;
-                    Mix_HaltMusic();
-                }
-                else{
-                    soundOn=true;
-                    Mix_PlayMusic(menu_music,-1);
+            
+        }
+        if (hovered != 0) {
+            if (curTime - preTime > 10) {
+                preTime = curTime;
+                hovered->setBlendTexture(255);
+                if (hovered == &bSingle || hovered == &bMulti || hovered == &bExit) {
+                    arrow_right.render(hoveredRect->x - 70 - width, hoveredRect->y + 15);
+                    arrow_left.render(hoveredRect->x + hoveredRect->w + width, hoveredRect->y + 15);
+                    width += index;
+                    if (width == 20 || width == 0)
+                        index = -index;
                 }
             }
         }
-        if(singlePlayer.checkArea(event.button.x,event.button.y)){
-                bSingle.setBlendTexture(255);
-                arrow_right.render(bSingleRect.x-70-width,bSingleRect.y+15);
-                arrow_left.render(bSingleRect.x+bSingleRect.w+width,bSingleRect.y+15);
-                if(gameRender::waitMouseDown(event)){
-                    if(soundOn)
-                        Mix_PlayChannel(1,button_press,0);
-                    choice=SINGLEPLAYER;
-                }
-        }
-        else if(multiPlayer.checkArea(event.button.x,event.button.y)){
-                bMulti.setBlendTexture(255);
-                arrow_right.render(bMultiRect.x-70-width,bMultiRect.y+15);
-                arrow_left.render(bMultiRect.x+bMultiRect.w+width,bMultiRect.y+15);
-                if(gameRender::waitMouseDown(event)){
-                    if(soundOn)
-                        Mix_PlayChannel(1,button_press,0);
-                    choice=MULTIPLAYER;
-                }
-        }
-        else if(exit.checkArea(event.button.x,event.button.y)){
-                bExit.setBlendTexture(255);
-                arrow_right.render(bExitRect.x-70-width,bExitRect.y+15);
-                arrow_left.render(bExitRect.x+bExitRect.w+width,bExitRect.y+15);
-                if(gameRender::waitMouseDown(event)){
-                    choice=EXIT;
-                    Exit=true;
-                }
-        }
-        else if(tutorial.checkArea(event.button.x,event.button.y)){
-                bTutorial.setBlendTexture(255);
-                if(gameRender::waitMouseDown(event)){
-                    if(soundOn)
-                        Mix_PlayChannel(1,button_press,0);
-                    choice=TUTORIAL;
-                }
-        }
-        else if(sound.checkArea(event.button.x,event.button.y)){
-                if(soundOn)
-                    bSound_on.setBlendTexture(255);
-                else
-                    bSound_off.setBlendTexture(255);
-        }
-        width+=index;
-        if(width==20 || width==0)
-            index=-index;
         SDL_RenderPresent(renderer);
     }
     while(!SDL_PollEvent(&event));//put out all garbage event
