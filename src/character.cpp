@@ -4,7 +4,7 @@
 
 extern int frameRate;
 extern bool soundOn;
-bomb* bombMap[ROW][COLUMN];
+bomb *bombMap[ROW][COLUMN] = {0};
 
 
 void character::initCharacter(SDL_Renderer* renderer){
@@ -141,6 +141,7 @@ void character::renderPlayer(){
             if(!bombMap[bombBlock.y][bombBlock.x]->checkBombAlive()){ //countdown==-1- --- bomb explosed over
                 Bomb.erase(Bomb.begin()+i);
                 delete bombMap[bombBlock.y][bombBlock.x];
+                bombMap[bombBlock.y][bombBlock.x] = 0;
             }
             else
                 bombMap[bombBlock.y][bombBlock.x]->bombBlast();

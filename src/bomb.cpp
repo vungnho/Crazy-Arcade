@@ -44,6 +44,8 @@ bomb::bomb(int Character,int playerID, int bombLength){
                     break;
         case LODUMANI:  bombSet=skull_bomb;
                         break;
+        default:
+            bombSet = robot_bomb1;
     }
     bombX=0;
     bombY=0;
@@ -384,7 +386,12 @@ void bomb::freeBomb(){
     delete skull_bomb;
     delete rose_bomb;
     delete ball_bomb;
-    for(int i=0;i<ROW;i++)
-        for(int j=0;j<COLUMN;j++)
-            delete bombMap[i][j];
+    for (int i = 0; i < ROW; i++) {
+        for (int j = 0; j < COLUMN; j++) {
+            if (bombMap[i][j]) {
+                delete bombMap[i][j];
+                bombMap[i][j] = 0;
+            }
+        }
+    }
 }
